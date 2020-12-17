@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wezom-test</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+    <div class="box">
+        <div class="header">
+    <div class="header__content">
+        <div class="header__nav">
+            <div class="nav__item">
+                <a href="javascript:void(0)" class="headerLinkFirst">главная</a>
+            </div>
+            <div class="nav__item">
+                <a href="javascript:void(0)" class="headerLinks headerLinks_second">о компании</a>
+            </div>
+            <div class="nav__item">
+                <a href="javascript:void(0)" class="headerLinks">ссылка 1</a>
+            </div>
+            <div class="nav__item">
+                <a href="javascript:void(0)" class="headerLinks">ссылка 2</a>
+            </div>
+            <div class="nav__item">
+                <a href="javascript:void(0)" class="headerLinks">ссылка 3</a>
+            </div>
+        </div>
+        <div class="header__btn">
+            <button class="btn__item">
+                    <object data="./img/header/header.svg" type="image/svg+xml" class="btn__imgHeader"></object>
+                    вход
+            </button>
+        </div>
+    </div>
+    <div class="bg-black">
+    <div class="popUpHeader">
+        <i class="fas fa-times" id="close"></i>
+        <div class="popUpHeader__left">
+            <div class="popUp__title">
+                <h3>Вход в личный кабинет</h3>
+            </div>
+            <form class="popUp__main" onsubmit="javascript:return validate('popUp__main','email')">
+                <div class="popUp__email">
+                    <label for="email">Ваш email</label>
+                    <input type="email" id="email" placeholder="mikel_ivanov98@gmail.com" required>
+                    <div id="result"></div>
+                </div>
+                <div class="popUp__password">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" placeholder="*************" required>
+                    <div id="result1"></div>
+                </div>  
+                <div class="popUp__remember">
+                    <input type="checkbox" id='checkbox'>
+                    <label for="checkbox">Запомнить меня</label>
+                </div>
+                <div class="popUp__checkIn">
+                    <a href="javascript:void(0)">Забыли пароль?</a>
+                    <a href="javascript:void(0)">Регистрация</a>
+                </div>
+                <div class="popUp__btn">
+                    <button>Войти в личный кабинет</button>
+                </div>
+            </form>
+        </div>
+        <div class="popUpHeader__right">
+            <div class="popUp__title">
+                <h3>Войти с помощью</h3>
+            </div>
+            <div class="popUp__mainBtn">
+                <div class="btn__social btn__fb">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </div>
+                <div class="btn__social btn__twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </div>
+                <div class="btn__social btn__google">
+                    <i class="fab fa-google"></i>
+                    <span>Google</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+        <div class="main__top">
+    <div class="main__top__content">
+        <div class="logo">
+    <div class="logo__icon">
+        <a href="javascript:void(0)" class="logo__img">
+            <img src="./img/main/Test.png" alt="Test">
+        </a>
+    </div>
+    <div class="logo__tel">
+        <div class="tel__box">
+            <div class="telbox__item">
+                <a href="tel:+380 98 170 00 740">+380 98 170 00 740</a>
+            </div>
+            <div class="telbox__item2">
+                <a href="tel:+380 98 170 00 740">+380 98 170 00 740</a>
+            </div>
+            <div class="telbox__call">
+                <a href="javascript:void(0)">
+                    <object data="img/main/phone.svg" type="image/svg+xml"></object>
+                    позвонить мне
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="logo__menu">
+        <div class="menu__icon menu__icon1">
+            <a href="javascript:void(0)">
+                <object data="img/main/howMany.svg" type="image/svg+xml" class="howMany">
+                </object>
+                <p id='compareNumb'>0</p>
+                <object data="img/main/comparison.svg" type="image/svg+xml"></object>
+                <span>сравнение</span>
+            </a>
+        </div>
+        <div class="string"></div>
+        <div class="menu__icon">
+            <a href="javascript:void(0)">
+                <object data="img/main/howMany.svg" type="image/svg+xml" class="howMany">
+                </object>
+                <p id='favoritesNumb'>0</p>
+                <object data="img/main/star.svg" type="image/svg+xml"></object>
+                <span>избранное</span>
+            </a>
+        </div>
+        <div class="string"></div>
+        <div class="menu__icon menu__icon3">
+            <a href="javascript:void(0)">
+                <object data="img/main/howMany.svg" type="image/svg+xml" class="howMany">
+                </object>
+                <p>5</p>
+                <object data="img/main/shop-box.svg" type="image/svg+xml"></object>
+                <span>корзина</span>
+            </a>
+        </div>
+    </div>
+    <div class="bg-call">
+    <div class="popUpCall">
+        <i class="fas fa-times" id="call-close"></i>
+        <div class="popUpCall__title">
+            <h3>Перезвонить мне</h3>
+        </div>
+        <div class="popUpCall__main">
+            <div class="popUpCall__tel">
+                <label for="tel">Номер телефона</label>
+                <input type="tel" id="tel" placeholder="+38(0__) ___ - __ - __" required data-mask="+38(000)000-00-00">
+            </div>
+        </div>
+        <div class="popUpCall__btn">
+            <button>Войти в личный кабинет</button>
+        </div>
+    </div>
+</div>
+
+</div>
+        <div class="menu">
+    <div class="menu__left">
+        <div class="menu__left__select select">
+            <div class="select__header">
+                <div class="select__header__icon">
+                    <img src="./img/main/menu-burger.png" alt="burger">
+                </div>
+                <span class="select__header__current">Меню</span>
+            </div>
+            <div class="select__body">
+                <div class="select__item select__item1">
+                    <a href='javascript:void(0)'><span>ссылка 1</span><img src="./img/main/link.png" alt="link"></a>
+                </div>
+                <div class="select__item select__item2">
+                    <a href='javascript:void(0)'><span>ссылка 2</span><img src="./img/main/link.png" alt="link"></a>
+                </div>
+                <div class="select__item select__item3">
+                    <a href='javascript:void(0)'><span>ссылка 3</span><img src="./img/main/link.png" alt="link"></a>
+                </div>
+                <div class="select__item select__item4">
+                    <a href='javascript:void(0)'><span>ссылка 4</span><img src="./img/main/link.png" alt="link"></a>
+                </div>
+                <div class="select__item select__item5">
+                    <a href='javascript:void(0)'><span>ссылка 5</span><img src="./img/main/link.png" alt="link"></a>
+                </div>
+                <div class="select__item select__item6">
+                    <a href='javascript:void(0)'><span>ссылка 6</span><img src="./img/main/link.png" alt="link"></a>
+                </div>
+                <div class="select__item select__item7">
+                    <a href='javascript:void(0)'><span>ссылка 7</span><img src="./img/main/link.png" alt="link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu__right">
+        <div class="menu__right__search">
+            <input type="text" class="menu__right__search__text" placeholder="Поиск по сайту" id="search">
+            <div id="result2"></div>
+            <div class="menu__right__search__string"></div>
+            <div class="menu__right__search__category">
+                <select name="search" id="search">
+                    <option value="" selected><span>Все категории</span></option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+            <button class="menu__right__search__btn">поиск</button>
+        </div>
+        <div class="products">
+    <div class="products__top">
+        <div class="products__item products__item1">
+            <a href="javascript:void(0)" class="products__link">
+                <svg id="car" class="prodIicon" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m488.352 232.546c-14.363-7.5-29.437-13.586-44.802-18.089-3.975-1.162-8.142 1.113-9.307 5.088s1.113 8.142 5.088 9.307c14.426 4.228 28.583 9.944 42.079 16.991 1.493.779 2.887 1.687 4.196 2.685-8.189.082-16.242.426-22.486 1.634-13.958 2.701-16.888 9.799-16.888 15.277 0 15.413 20.757 28.934 44.42 28.934 2.141 0 4.256-.088 6.349-.228v7.03h-38.813c-9.049-13.155-24.2-21.802-41.338-21.802s-32.289 8.647-41.337 21.802h-215.328c-9.049-13.155-24.2-21.802-41.338-21.802s-32.289 8.647-41.337 21.802h-62.51v-17.87h10.1c4.142 0 7.5-3.357 7.5-7.5v-5.66h17.212c10.173 0 18.45-8.276 18.45-18.449v-6.456c0-3.809-1.156-7.47-3.342-10.589l-15.27-21.785h18.14c2.563 0 4.95-1.31 6.327-3.472 9.358-14.697 23.379-28.16 41.672-40.015 11.443-7.416 23.815-12.989 36.782-16.688-2.283 1.311-4.533 2.672-6.737 4.101-14.321 9.283-26.416 19.643-35.948 30.791-3.959 4.631-4.897 10.961-2.449 16.521 2.431 5.52 7.691 9.075 13.729 9.279 0 0 241.267 8.151 241.339 8.152.072 0 .144-.006.217-.008.205-.005.409-.013.609-.034l.025-.001c14.056-1.539 28.557-1.386 43.103.455 4.114.525 7.862-2.39 8.382-6.499s-2.39-7.862-6.5-8.382c-14.525-1.839-29.029-2.117-43.166-.83-11.833-11.043-23.407-21.695-34.44-31.697-26.438-23.954-60.594-38.196-96.174-40.102l-34.912-1.87c-33.017-1.762-64.839 6.613-92.019 24.226-18.694 12.114-33.433 25.917-43.868 41.074-24.944.108-27.163-.231-29.798.252-9.253 1.435-16.365 9.435-16.365 19.088v45.352c0 .029-.004.058-.004.087s.004.058.004.087v5.573h-7.08c-5.801 0-10.52 4.715-10.52 10.51v45.891c0 4.998 3.557 9.332 8.435 10.302l63.766 12.882c7.346 18.587 25.479 31.777 46.646 31.777 19.881 0 37.096-11.629 45.202-28.441h27.662c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-23.178c.295-2.195.461-4.43.461-6.705 0-4.621-.641-9.093-1.817-13.345h201.344c-1.176 4.252-1.817 8.724-1.817 13.345 0 2.275.167 4.51.461 6.705h-140.454c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h144.938c8.106 16.813 25.321 28.441 45.201 28.441 19.881 0 37.096-11.629 45.202-28.441h22.85c14.943 0 27.1-12.157 27.1-27.1v-52.61c-.001-16.425-9.063-31.356-23.649-38.971zm-367.187-34.49c-.17-.385.021-.607.122-.727 21.064-24.635 53.969-44.655 91.824-49.022l15.644.838c2.493 9.235 5.863 31.47-.042 52.861l-107.04-3.617c-.172-.006-.367-.012-.508-.333zm221.566 7.803-98.697-3.335c4.521-19.328 3.048-39.271.403-52.117 28.254 3.709 54.995 16.007 76.226 35.244 7.151 6.483 14.534 13.245 22.068 20.208zm-289.469 39.38v6.456c0 1.902-1.547 3.449-3.45 3.449h-17.212v-37.939c0-.68.171-1.315.45-1.889l19.587 27.944c.408.582.625 1.267.625 1.979zm-38.262 75.791v-4.855h55.518c-1.424 5.151-2.007 10.372-1.757 15.716zm103.847 43.635c-19.379 0-35.146-15.767-35.146-35.146s15.767-35.146 35.146-35.146c19.38 0 35.147 15.767 35.147 35.146s-15.767 35.146-35.147 35.146zm371.804-85.293c-16.952 0-28.065-8.688-29.304-13.154 3.105-1.802 12.948-2.714 29.304-2.714 1.773 0 3.534.063 5.274.177.704 2.511 1.075 5.141 1.075 7.833v7.607c-2.078.166-4.199.251-6.349.251zm-73.802 85.293c-19.379 0-35.146-15.767-35.146-35.146s15.767-35.146 35.146-35.146c19.38 0 35.147 15.767 35.147 35.146s-15.767 35.146-35.147 35.146zm68.051-28.441h-18.366c.295-2.195.461-4.43.461-6.705 0-4.621-.641-9.093-1.817-13.345h31.822v7.95c0 6.672-5.428 12.1-12.1 12.1z"/><path d="m118.847 304.996c-13.522 0-24.523 11.001-24.523 24.522 0 13.522 11.001 24.523 24.523 24.523s24.523-11.001 24.523-24.523c0-13.521-11.001-24.522-24.523-24.522zm0 34.046c-5.251 0-9.523-4.272-9.523-9.523s4.272-9.522 9.523-9.522 9.523 4.271 9.523 9.522-4.272 9.523-9.523 9.523z"/><path d="m416.849 304.996c-13.522 0-24.523 11.001-24.523 24.522 0 13.522 11.001 24.523 24.523 24.523s24.523-11.001 24.523-24.523c0-13.521-11.001-24.522-24.523-24.522zm0 34.046c-5.251 0-9.523-4.272-9.523-9.523s4.272-9.522 9.523-9.522 9.523 4.271 9.523 9.522-4.272 9.523-9.523 9.523z"/><path d="m256 228.686c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h5.2c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5z"/><path d="m143.907 228.686c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h5.2c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5z"/></g></svg> 
+                <span>Ссылка 1</span>
+            </a>
+        </div>
+        <div class="products__item products__item2">
+            <a href="javascript:void(0)" class="products__link">
+                <svg id="truck" class="prodIicon" enable-background="new 0 0 64 64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g><path d="m44 53c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3zm0 4c-.551 0-1-.448-1-1s.449-1 1-1 1 .448 1 1-.449 1-1 1z"/><path d="m14 53c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3zm0 4c-.551 0-1-.448-1-1s.449-1 1-1 1 .448 1 1-.449 1-1 1z"/><path d="m56 59c1.654 0 3-1.346 3-3s-1.346-3-3-3-3 1.346-3 3 1.346 3 3 3zm0-4c.551 0 1 .448 1 1s-.449 1-1 1-1-.448-1-1 .449-1 1-1z"/><path d="m63 56c0-3.859-3.14-7-7-7-2.548 0-4.775 1.373-6 3.413-1.225-2.04-3.452-3.413-6-3.413h-9v-18h-4v-2h4v-8h-4v-2h-6v-3c0-.552.449-1 1-1h1v-2h-1c-1.654 0-3 1.346-3 3v3c-11.028 0-20 8.972-20 20v6.184c-1.161.414-2 1.514-2 2.816v6c0 1.654 1.346 3 3 3h3.08c.224 1.556.956 2.949 2.031 4h-8.111v2h28v-2h-10.111c.587-.574 1.068-1.251 1.425-2h17.37c.357.749.839 1.426 1.425 2h-2.109v2h26v-2h-2.111c1.301-1.272 2.111-3.042 2.111-5zm-7-5c2.757 0 5 2.243 5 5s-2.243 5-5 5-5-2.243-5-5 2.243-5 5-5zm-51-6v-4h10v-3c0-2.757-2.243-5-5-5h-3.95c.244-.687.527-1.354.849-2h16.101v4h-2v12.019c-1.674-1.261-3.747-2.019-6-2.019zm.464-10h4.536c1.654 0 3 1.346 3 3v1h-8c0-1.376.17-2.711.464-4zm17.536 14.026v-12.026h2v16h-.202c-.299-1.469-.93-2.815-1.798-3.974zm2-14.026v-4h4v20h10.111c-.587.574-1.068 1.251-1.425 2h-10.686v-18zm0-10h4v4h-4zm8 8v16h-2v-16zm0-10v4h-2v-4zm-4-2v2h-4v-2zm-6 0v8h-14.956c3.233-4.82 8.729-8 14.956-8zm-19 26h1v1c0 .552-.449 1-1 1h-1v-1c0-.552.449-1 1-1zm10 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-12c-3.519 0-6.432 2.614-6.92 6h-3.08c-.551 0-1-.448-1-1v-3h1c1.654 0 3-1.346 3-3v-1h8c4.411 0 8 3.589 8 8v2h-2.08c.047-.328.08-.66.08-1 0-3.859-3.14-7-7-7zm11 8v-2h12.08c-.047.328-.08.66-.08 1s.033.672.08 1zm14-1c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5zm9.889 5c.429-.42.8-.896 1.111-1.413.311.517.682.994 1.111 1.413z"/><path d="m31 61h4v2h-4z"/></g></svg> 
+                <span>Ссылка 2</span>
+            </a>
+        </div>
+        <div class="products__item products__item3">
+            <a href="javascript:void(0)" class="products__link">
+                <svg version="1.1" id="wheel" class="prodIicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M179.039,329.3
+			l-38.268,66.281c-16.239-13.376-30.399-29.816-41.522-49.081C88.126,327.235,80.97,306.752,77.505,286h77.112
+			c9.879,0.464,18.229,5.758,23.534,14.946C182.886,309.147,183.206,320.192,179.039,329.3z M178.152,211.054
+			c-4.735,8.201-14.141,14-24.111,14.946H77.506c3.465-20.751,10.621-41.234,21.744-60.5s25.283-35.705,41.522-49.081l38.556,66.781
+			C183.865,191.988,183.456,201.866,178.152,211.054z M256,437c-22.246,0-43.563-4.044-63.267-11.419L231.29,358.8
+			c5.341-8.323,14.101-12.908,24.71-12.908c9.47,0,19.195,5.246,24.999,13.408l38.268,66.281C299.563,432.956,278.246,437,256,437z
+			 M211,256c0-24.813,20.187-45,45-45s45,20.187,45,45s-20.187,45-45,45S211,280.813,211,256z M280.71,153.2
+			c-5.341,8.323-14.101,12.908-24.71,12.908c-9.47,0-19.195-5.246-24.999-13.408l-38.268-66.281C212.437,79.044,233.754,75,256,75
+			c22.246,0,43.563,4.044,63.267,11.419L280.71,153.2z M412.751,346.5c-11.123,19.265-25.283,35.705-41.522,49.081L332.672,328.8
+			c-4.538-8.787-4.129-18.666,1.176-27.854c4.735-8.201,14.141-14,24.111-14.946h76.535
+			C431.03,306.752,423.874,327.235,412.751,346.5z M357.383,226c-9.879-0.464-18.229-5.758-23.534-14.946
+			c-4.735-8.201-5.054-19.246-0.888-28.354l38.268-66.281c16.239,13.376,30.399,29.816,41.522,49.081
+			c11.123,19.265,18.279,39.748,21.744,60.5H357.383z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M256,241c-8.271,0-15,6.729-15,15s6.729,15,15,15s15-6.729,15-15S264.271,241,256,241z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+                <span>Ссылка 3</span>
+            </a>
+        </div>
+        <div class="products__item products__item4">
+            <a href="javascript:void(0)" class="products__link">
+                <svg id='oil' class="prodIicon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="m52.188 5.427a6.937 6.937 0 0 0 -6.176-1.1l-19.158 5.673h-1.854v-7a1 1 0 0 0 -1-1h-12a1 1 0 0 0 -1 1v7.184a3 3 0 0 0 -2 2.816v46a3 3 0 0 0 3 3h40a3 3 0 0 0 3-3v-47.964a6.939 6.939 0 0 0 -2.812-5.609zm-29.188-1.427v2h-3v2h3v2h-10v-2h3v-2h-3v-2zm30 55a1 1 0 0 1 -1 1h-40a1 1 0 0 1 -1-1v-46a1 1 0 0 1 1-1h15a1.016 1.016 0 0 0 .284-.041l19.3-5.717a5 5 0 0 1 6.416 4.794z"/><path d="m48 8c-1 0-13.15 3.788-20.3 6.046a1 1 0 0 0 .3 1.954h22a1 1 0 0 0 1-1v-4a3.007 3.007 0 0 0 -3-3zm1 6h-14.46c6.211-1.93 12.728-3.909 13.46-4a1.006 1.006 0 0 1 1 1z"/><path d="m17 6h2v2h-2z"/><path d="m50 18h-36a1 1 0 0 0 -1 1v38a1 1 0 0 0 1 1h36a1 1 0 0 0 1-1v-38a1 1 0 0 0 -1-1zm-1 38h-34v-36h34z"/><path d="m31.816 54h.368a9 9 0 0 0 8.356-12.343l-7.611-19.029a1 1 0 0 0 -1.858 0l-7.611 19.029a9 9 0 0 0 8.356 12.343zm-6.5-11.6 6.684-16.707 6.683 16.707a7 7 0 0 1 -6.5 9.6h-.368a7 7 0 0 1 -6.5-9.6z"/><path d="m19 24h3v-2h-4a1 1 0 0 0 -1 1v4h2z"/><path d="m18 54h4v-2h-3v-3h-2v4a1 1 0 0 0 1 1z"/><path d="m45 27h2v-4a1 1 0 0 0 -1-1h-4v2h3z"/><path d="m47 53v-4h-2v3h-3v2h4a1 1 0 0 0 1-1z"/></svg> 
+                <span>Ссылка 4</span>
+            </a>
+        </div>
+        <div class="products__item products__item5">
+            <a href="javascript:void(0)" class="products__link">
+                <svg id="battery" class="prodIicon" enable-background="new 0 0 546.55 546.55" viewBox="0 0 546.55 546.55" xmlns="http://www.w3.org/2000/svg"><path d="m529.47 102.478h-51.239v-17.08c0-9.441-7.639-17.08-17.08-17.08h-68.319c-9.441 0-17.08 7.639-17.08 17.08v17.08h-204.955v-17.08c0-9.441-7.639-17.08-17.08-17.08h-68.319c-9.441 0-17.08 7.639-17.08 17.08v17.08h-51.238c-9.441 0-17.08 7.639-17.08 17.08v341.594c0 9.441 7.639 17.08 17.08 17.08h512.39c9.44 0 17.08-7.639 17.08-17.08v-341.594c0-9.441-7.639-17.08-17.08-17.08zm-17.079 341.594h-478.232v-307.435h478.231v307.435z"/><path d="m102.478 273.275h34.159v-34.159h34.159v-34.159h-34.159v-34.159h-34.159v34.159h-34.159v34.159h34.159z"/><path d="m375.753 204.956h102.478v34.159h-102.478z"/></svg>
+                <span>Ссылка 5</span>
+            </a>
+        </div>
+    </div>
+    <div class="products__main">
+        <div class="products__mainTop">
+            <div class="products__mainBox">
+                <a href='#tabCont1' class="products__mainBtn mainBtn1 activeTab">Tab 1</a>
+                <a href='#tabCont2' class="products__mainBtn mainBtn2">Tab 2</a>
+            </div>
+        </div>
+        <div class="products__main__selects">
+            <div class="products__selectsBox1 selectBox" id="tabCont1">
+                <div class="products__top">
+                    <div class="products__topItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__topItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 2</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__topItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 3</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__topItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 4</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                </div>
+                <div class="products__bottom">
+                    <div class="products__bottomItem">
+                        <select name="products" class="products-field" id="products-field1">
+                            <option value="" selected>Select 5</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__bottomItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 6</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__bottomItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 7</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__bottomItemPrice">
+                        <div id="price">
+                            <p>Цена</p>
+                        </div>
+                        <div class="price-block">
+                            <input type="number" placeholder="50" id="price1" min="0" oninput="validity.valid||(value='');">
+                            <div class="products-bottomString"></div>
+                        </div>
+                        <div class="price-block">
+                            <input type="number" placeholder="20 000" id="price2" min="0" oninput="validity.valid||(value='');">
+                            <div class="products-bottomString"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products__selectsBox2 selectBox" id="tabCont2">
+                <div class="products__top">
+                    <div class="products__topItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 1</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__topItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 2</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__topItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 3</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__topItem">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 4</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                </div>
+                <div class="products__bottom2">
+                    <div class="products__bottomItem2">
+                        <select name="products" class="products-field">
+                            <option value="" selected>Select 6</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <div class="products-bottomString"></div>
+                    </div>
+                    <div class="products__bottomItemPrice2">
+                        <div id="price">
+                            <p>Цена</p>
+                        </div>
+                        <div class="price-block">
+                            <input type="number" placeholder="50" id="price3">
+                            <div class="products-bottomString"></div>
+                        </div>
+                        <div class="price-block">
+                            <input type="number" placeholder="20 000" id="price4">
+                            <div class="products-bottomString"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products__selectsBtn">
+                <button id="productsBtnClear">
+                    <img src="./img/main/product/×.png" alt="x"> Очистить фильтр
+                </button>
+                <button id='productsBtnFilter'>
+                    применить фильтр
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+        <div class="cards">
+    <div class="cards__content">
+        <div class="cards__header">
+            <div class="cards__header__title">
+                <p>Карточки товаров</p>
+                <div class="cards__header__title__hr"></div>
+            </div>
+            <div class="cards__header__link">
+                <a href="javascript:void(0)">
+                    <span>Ссылка в каталог</span> 
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="cardBody">
+    <div class="cardBody__item cardBorder cardItem1">
+        <div class="cardBody__item__header">
+            <div class="cardBody__item__header__mark">Mark</div>
+            <a href="javascript:void(0)" class="cardBody__item__header__title">
+                <span>Антифриз Fosser Antifreeze </span><br>
+                <span>FA 12 Readymix 1 л Concentrat, Germany</span>
+            </a>
+        </div>
+        <div class="cardBody__item__main">
+            <div class="cardBody__item__main__reviews rating1">
+                <div class="rating-area">
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5" title="Оценка «5»"></label>	
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4" title="Оценка «4»"></label>    
+                    <input type="radio" id="star-3" name="rating" value="3">
+                    <label for="star-3" title="Оценка «3»"></label>  
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2" title="Оценка «2»"></label>    
+                    <input type="radio" id="star-1" name="rating" value="1">
+                    <label for="star-1" title="Оценка «1»"></label>
+                </div>
+                <div class="rewiews-quantity">
+                    <a href="javascript:void(0)">Отзывы (10)</a>
+                </div>
+                <div class="rewiews-inStock">
+                    <a href="javascript:void(0)">В наличии: 24шт.</a>
+                </div>
+            </div>
+            <div class="cardBody__item__main__tire">
+                <div class="cardBody__item__main__tire__icon">
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/sun.svg" type="image/svg+xml"></object>
+                        <p>Летняя</p>
+                    </div>
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/carIcon.svg" type="image/svg+xml"></object>
+                        <p>Легковая</p>
+                    </div>
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/new.svg" type="image/svg+xml"></object>
+                        <p>Новая</p>
+                    </div>
+                </div>
+                <div class="cardBody__item__main__tire__img">
+                    <img src="./img/cards/tire1.png" alt="tire1">
+                </div>
+            </div>
+            <div class="cardBody__item__main__sticker">
+                <div class="sticker-item">
+                    <img src="./img/cards/sticker-new.png" alt="new" id="stickerNew">
+                    <p>новинка</p>
+                </div>
+                <div class="sticker-item">
+                    <img src="./img/cards/sticker-hit.png" alt="hit" id="stickerHit">
+                    <p>хит</p>
+                </div>
+                <div class="sticker-item">
+                    <img src="./img/cards/sticker-sale.png" alt="sale" id="stickerSale">
+                    <p>скидка</p>
+                </div>
+            </div>
+            <div class="cardBody__item__main__price">
+                <div class="cardBody__item__main__price__new">599 <span>грн.</span></div>
+                <div class="cardBody__item__main__price__old">
+                    <span>1250 грн.</span>
+                    <div id="priceStr"></div>
+                </div>
+            </div>
+            <div class="cardBody__item__main__btn">
+                <button class="cardBody__item__main__btn__item">
+                    <object data="./img/cards/cards-box.svg" type="image/svg+xml"></object>
+                    <span>Купить товар</span>
+                </button>
+            </div>
+        </div>
+        <div class="cardBody__item__footer">
+            <a href="javascript:void(0)" class="cardBody__item__footer__compare">
+                <object data="./img/cards/cards-compare.svg" type="image/svg+xml"></object>
+                <span class="compare__text">Сравнить товар</span>
+            </a>
+            <a href="javascript:void(0)" class="cardBody__item__footer__favorites">
+                <object data="./img/cards/cards-star.svg" type="image/svg+xml"></object>
+                <span class="favorites__text">В избранное</span>
+            </a>
+        </div>
+    </div>
+    <div class="cardBody__item2 cardBorder cardItem2">
+        <div class="cardBody__item2__header">
+            <div class="cardBody__item2__header__mark">Mark</div>
+            <a href="javascript:void(0)" class="cardBody__item2__header__title">
+                <span>Антифриз Fosser Antifreeze </span><br>
+                <span>FA 12 Readymix 1 л Concentrat, Germany</span>
+            </a>
+        </div>
+        <div class="cardBody__item2__main">
+            <div class="cardBody__item2__main__reviews rating2">
+                <div class="rating-area2">
+                    <input type="radio" id="star2-5" name="rating" value="5">
+                    <label for="star2-5" title="Оценка «5»"></label>	
+                    <input type="radio" id="star2-4" name="rating" value="4">
+                    <label for="star2-4" title="Оценка «4»"></label>    
+                    <input type="radio" id="star2-3" name="rating" value="3">
+                    <label for="star2-3" title="Оценка «3»"></label>  
+                    <input type="radio" id="star2-2" name="rating" value="2">
+                    <label for="star2-2" title="Оценка «2»"></label>    
+                    <input type="radio" id="star2-1" name="rating" value="1">
+                    <label for="star2-1" title="Оценка «1»"></label>
+                </div>
+                <div class="rewiews-quantity">
+                    <a href="javascript:void(0)">Отзывы (10)</a>
+                </div>
+                <div class="rewiews-inStock">
+                    <a href="javascript:void(0)">В наличии: 24шт.</a>
+                </div>
+            </div>
+            <div class="cardBody__item2__main__tire">
+                <div class="cardBody__item2__main__tire__icon">
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/sun.svg" type="image/svg+xml"></object>
+                        <p>Летняя</p>
+                    </div>
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/new.svg" type="image/svg+xml"></object>
+                        <p>Новая</p>
+                    </div>
+                </div>
+                <div class="cardBody__item2__main__tire__img">
+                    <img src="./img/cards/tire2.png" alt="tire1" id="tire2">
+                </div>
+            </div>
+            <div class="cardBody__item2__main__sticker sticker2">
+                <div class="sticker-item">
+                    <img src="./img/cards/sticker-new.png" alt="new" id="stickerNew">
+                    <p>новинка</p>
+                </div>
+                <div class="sticker-item">
+                    <img src="./img/cards/sticker-hit.png" alt="hit" id="stickerHit">
+                    <p>хит</p>
+                </div>
+            </div>
+            <div class="cardBody__item2__main__price">
+                <div class="cardBody__item__main__price__new">599 <span>грн.</span></div>
+                <div class="cardBody__item__main__price__old">
+                    <span>1250 грн.</span>
+                    <div id="priceStr"></div>
+                </div>
+            </div>
+            <div class="cardBody__item2__main__btn">
+                <button class="cardBody__item__main__btn__item">
+                    <object data="./img/cards/cards-box.svg" type="image/svg+xml"></object>
+                    <span>Купить товар</span>
+                </button>
+            </div>
+        </div>
+        <div class="cardBody__item2__footer">
+            <a href="javascript:void(0)" class="cardBody__item2__footer__compare">
+                <object data="./img/cards/cards-compare.svg" type="image/svg+xml"></object>
+                <span class="compare__text">Сравнить товар</span>
+            </a>
+            <a href="javascript:void(0)" class="cardBody__item2__footer__favorites">
+                <object data="./img/cards/cards-star.svg" type="image/svg+xml"></object>
+                <span class="favorites__text">В избранное</span>
+            </a>
+        </div>
+    </div>
+    <div class="cardBody__item3 cardBorder cardItem3">
+        <div class="cardBody__item3__header">
+            <div class="cardBody__item3__header__mark">Mark</div>
+            <a href="javascript:void(0)" class="cardBody__item3__header__title">
+                <span>Антифриз Fosser Antifreeze </span><br>
+                <span>FA 12 Readymix 1 л Concentrat, Germany</span>
+            </a>
+        </div>
+        <div class="cardBody__item3__main">
+            <div class="cardBody__item3__main__reviews rating3">
+                <div class="rating-area3">
+                    <input type="radio" id="star3-5" name="rating" value="5">
+                    <label for="star3-5" title="Оценка «5»"></label>	
+                    <input type="radio" id="star3-4" name="rating" value="4">
+                    <label for="star3-4" title="Оценка «4»"></label>    
+                    <input type="radio" id="star3-3" name="rating" value="3">
+                    <label for="star3-3" title="Оценка «3»"></label>  
+                    <input type="radio" id="star3-2" name="rating" value="2">
+                    <label for="star3-2" title="Оценка «2»"></label>    
+                    <input type="radio" id="star3-1" name="rating" value="1">
+                    <label for="star3-1" title="Оценка «1»"></label>
+                </div>
+                <div class="rewiews-quantity">
+                    <a href="javascript:void(0)">Без отзывов</a>
+                </div>
+                <div class="rewiews-inStock">
+                    <a href="javascript:void(0)">В наличии: 24шт.</a>
+                </div>
+            </div>
+            <div class="cardBody__item3__main__tire">
+                <div class="cardBody__item3__main__tire__icon">
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/sun.svg" type="image/svg+xml"></object>
+                        <p>Летняя</p>
+                    </div>
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/carIcon.svg" type="image/svg+xml"></object>
+                        <p>Легковая</p>
+                    </div>
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/new.svg" type="image/svg+xml"></object>
+                        <p>Новая</p>
+                    </div>
+                </div>
+                <div class="cardBody__item3__main__tire__img">
+                    <img src="./img/cards/tire3.png" alt="tire1">
+                </div>
+            </div>
+            <div class="cardBody__item3__main__sticker">
+                <div class="sticker-item">
+                    <img src="./img/cards/sticker-new.png" alt="new" id="stickerNew">
+                    <p>новинка</p>
+                </div>
+            </div>
+            <div class="cardBody__item3__main__price">
+                <div class="cardBody__item3__main__price__new">9 570 <span>грн.</span></div>
+                <div class="cardBody__item3__main__price__old">
+                    <span>11 250 грн.</span>
+                    <div id="priceStr"></div>
+                </div>
+            </div>
+            <div class="cardBody__item3__main__btn">
+                <button class="cardBody__item3__main__btn__item">
+                    <object data="./img/cards/cards-box.svg" type="image/svg+xml"></object>
+                    <span>Купить товар</span>
+                </button>
+            </div>
+        </div>
+        <div class="cardBody__item3__footer">
+            <a href="javascript:void(0)" class="cardBody__item3__footer__compare">
+                <object data="./img/cards/cards-compare.svg" type="image/svg+xml"></object>
+                <span class="compare__text">Сравнить товар</span>
+            </a>
+            <a href="javascript:void(0)" class="cardBody__item3__footer__favorites">
+                <object data="./img/cards/cards-star.svg" type="image/svg+xml"></object>
+                <span class="favorites__text">В избранное</span>
+            </a>
+        </div>
+    </div>
+    <div class="cardBody__item4 cardItem4">
+        <div class="cardBody__item4__header">
+            <div class="cardBody__item4__header__mark">Mark</div>
+            <a href="javascript:void(0)" class="cardBody__item4__header__title">
+                <span>Антифриз Fosser Antifreeze </span>
+            </a>
+            <span class="cardBody-title">FA 12 Readymix 1 л Concentrat, Germany</span>
+        </div>
+        <div class="cardBody__item4__main">
+            <div class="cardBody__item4__main__reviews rating4">
+                <div class="rating-area4">
+                    <input type="radio" id="star4-5" name="rating" value="5">
+                    <label for="star4-5" title="Оценка «5»"></label>	
+                    <input type="radio" id="star4-4" name="rating" value="4">
+                    <label for="star4-4" title="Оценка «4»"></label>    
+                    <input type="radio" id="star4-3" name="rating" value="3">
+                    <label for="star4-3" title="Оценка «3»"></label>  
+                    <input type="radio" id="star4-2" name="rating" value="2">
+                    <label for="star4-2" title="Оценка «2»"></label>    
+                    <input type="radio" id="star4-1" name="rating" value="1">
+                    <label for="star4-1" title="Оценка «1»"></label>
+                </div>
+                <div class="rewiews-quantity">
+                    <a href="javascript:void(0)">Отзывы (10)</a>
+                </div>
+                <div class="rewiews-inStock">
+                    <a href="javascript:void(0)">В наличии: 24шт.</a>
+                </div>
+            </div>
+            <div class="cardBody__item4__main__tire">
+                <div class="cardBody__item4__main__tire__icon">
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/sun.svg" type="image/svg+xml"></object>
+                        <p>Летняя</p>
+                    </div>
+                    <div class="tireIcon-item">
+                        <object data="./img/cards/carIcon.svg" type="image/svg+xml"></object>
+                        <p>Легковая</p>
+                    </div>
+                </div>
+                <div class="cardBody__item4__main__tire__img">
+                    <img src="./img/cards/tire4.png" alt="tire1">
+                </div>
+            </div>
+            <div class="cardBody__item4__main__sticker stickerBox4">
+                <div class="sticker-item">
+                    <img src="./img/cards/sticker-new.png" alt="new" id="stickerNew">
+                    <p>новинка</p>
+                </div>
+                <div class="sticker-item">
+                    <img src="./img/cards/sticker-hit.png" alt="hit" id="stickerHit">
+                    <p>хит</p>
+                </div>
+                <div class="sticker-item">
+                    <img src="./img/cards/sticker-sale.png" alt="sale" id="stickerSale">
+                    <p>скидка</p>
+                </div>
+            </div>
+            <div class="cardBody__item4__main__price">
+                <div class="cardBody__item__main__price__new">599 <span>грн.</span></div>
+                <div class="cardBody__item__main__price__old priceOld4">
+                    <span>1250 грн.</span>
+                    <div id="priceStr"></div>
+                </div>
+            </div>
+            <div class="cardBody__item4__main__btn">
+                <button class="cardBody__item4__main__btn__item">
+                    <object data="./img/cards/cards-box.svg" type="image/svg+xml"></object>
+                    <span>Купить товар</span>
+                </button>
+            </div>
+        </div>
+        <div class="cardBody__item4__footer">
+            <a href="javascript:void(0)" class="cardBody__item4__footer__compare">
+                <object data="./img/cards/cards-compare.svg" type="image/svg+xml"></object>
+                <span class="compare__text">Сравнить товар</span>
+            </a>
+            <a href="javascript:void(0)" class="cardBody__item4__footer__favorites">
+                <object data="./img/cards/cards-star.svg" type="image/svg+xml"></object>
+                <span class="favorites__text">В избранное</span>
+            </a>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+        <div class="blocksBox">
+    <div class="blocksBox__content">
+        <div class="blocksBoxLeft">
+    <div class="blocksBoxLeft__title">
+        <p>Блок 1</p>
+    </div>
+    <div class="blocksBoxLeft__main">
+        <p class="blocksBoxLeft__main__textTop">Будьте в курсе новостей и новинок!</p>
+        <p class="blocksBoxLeft__main__textBottom">Подписывайтесь на рассылку</p>
+        <div class="blocksBoxLeft__main__searchField">
+            <input type="email" class="blocksBoxLeft__main__searchField__input" placeholder="Укажите свой email для подписки" id='emailBlock'>
+            <button class="blocksBoxLeft__main__searchField__btn">подписаться</button>
+        </div>
+        <div id="resultBlock"></div>
+    </div>
+
+    <div class="bg-block">
+        <div class="popUpBlock">
+            <i class="fas fa-times" id="closeBlock"></i>
+            <div class="popUpBlock__main">
+                <div class="popUpBlock__title">
+                    <h3>Вы успешно подписаны на рассылку</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="blocksBoxRight">
+    <div class="blocksBoxRight__item">
+        <div class="item__title">
+            <h3>Блок ссылок 1</h3>
+        </div>
+        <div class="item__body">
+            <a href="javascript:void(0)" class="item__links link1">Ссылка 1</a>
+            <a href="javascript:void(0)" class="item__links">Ссылка 2</a>
+            <a href="javascript:void(0)" class="item__links">Ссылка 3</a>
+            <a href="javascript:void(0)" class="item__links">Ссылка 4</a>
+        </div>
+    </div>
+    <div class="blocksBoxRight__item itemCenter">
+        <div class="item__title">
+            <h3>Блок 2</h3>
+        </div>
+        <div class="item__body">
+            <a href="javascript:void(0)" class="item__links link1">Ссылка 1</a>
+            <a href="javascript:void(0)" class="item__links">Ссылка 2</a>
+            <a href="javascript:void(0)" class="item__links">Ссылка 3</a>
+            <a href="javascript:void(0)" class="item__links">Ссылка 4</a>
+        </div>
+    </div>
+    <div class="blocksBoxRight__item">
+        <div class="item__title">
+            <h3>Блок ссылок 3</h3>
+        </div>
+        <div class="item__body">
+            <a href="javascript:void(0)" class="item__links link1">Ссылка 1</a>
+            <a href="javascript:void(0)" class="item__links">Ссылка 2</a>
+            <a href="javascript:void(0)" class="item__links">Ссылка 3</a>
+            <a href="javascript:void(0)" class="item__links">Ссылка 4</a>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+        <div class="footer">
+    <div class="footer__content">
+        <div class="footer__logo footer__item">
+            <img src="./img/footer/footer-logo.png" alt="logo" class="footer__logoIcon">
+            <div class="footer__logoText">
+                <p>&#169; Copyrith 2017. Тестовое задание Wezom</p>
+            </div>
+        </div>
+        <div class="footer__social footer__item">
+            <div class="social__icon social__icon_first">
+                <i class="fab fa-vk"></i>
+            </div>
+            <div class="social__icon social__icon_center">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social__icon social__icon_center">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="social__icon social__icon_center">
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div class="footer__wezom footer__item">
+            <img src="./img/footer/footer-wezom.png" alt="wezom" class="wezom__icon">
+            <div class="wezom__text">
+                <p class="wezom__text_top">Разработка тестового</p>
+                <p class="wezom__text_bottom">Wezom Agency</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/eed4fbf255.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./plugins/jquery.mask.min.js"></script>
+    <script src='./script/script.js'></script>
+</body>
+</html>
