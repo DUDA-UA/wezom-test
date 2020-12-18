@@ -1830,9 +1830,6 @@ button {
     @media screen and (max-width: 726px) {
       .cardBody .cardItem1 {
         padding: 14px 24px 15px 14px; } }
-    @media screen and (max-width: 400px) {
-      .cardBody .cardItem1 {
-        padding-right: 13px !important; } }
   .cardBody .cardItem2 {
     max-width: 344px;
     width: 100%;
