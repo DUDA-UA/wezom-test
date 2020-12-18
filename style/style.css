@@ -1817,6 +1817,9 @@ button {
         border: 1px solid #dbdbdb;
         margin: 15px 5px;
         height: 550px; } }
+  @media screen and (max-width: 1350px) and (max-width: 400px) {
+    .cardBody .cardBorder {
+      height: 600px !important; } }
   .cardBody .cardItem1 {
     max-width: 303px;
     width: 100%;
@@ -1827,6 +1830,9 @@ button {
     @media screen and (max-width: 726px) {
       .cardBody .cardItem1 {
         padding: 14px 24px 15px 14px; } }
+    @media screen and (max-width: 400px) {
+      .cardBody .cardItem1 {
+        padding-right: 13px !important; } }
   .cardBody .cardItem2 {
     max-width: 344px;
     width: 100%;
